@@ -24,6 +24,14 @@ public class Recipe {
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -78,6 +86,14 @@ public class Recipe {
 
     public void setDirections(String directions) {
         this.directions = directions;
+    }
+
+    public Set<Ingredient> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(Set<Ingredient> ingredients) {
+        this.ingredients = ingredients;
     }
 
     public Byte[] getImage() {
